@@ -1,0 +1,91 @@
+#bur {
+    display: block;
+    height: 50px;
+    width: 250px;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body {
+    background: grey;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.form-group {
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.form-group label {
+    margin: 10px 0px;
+}
+
+.create-form button {
+    border: 1px solid white;
+    padding: 20px;
+    background: black;
+    color: white;
+    margin: 0px auto;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+ul {
+    -webkit-padding-start: 0px;
+}
+
+li {
+	position: relative;
+    list-style-type: none;
+    padding: 15px;
+    background: white;
+    width: 30%;
+    border: 1px solid black;
+    margin: 0px auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+   	text-align: left;
+}
+
+.change-devoured{
+	display: inline-block;
+	  border: 1px solid white;
+    padding: 10px;
+    background: black;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.burg-name{
+	margin: 0px auto;
+	display: inline-block;
+	// float: left;
+
+}
+.change-devoured p{
+	// float: right;
+	margin: 0px;
+}

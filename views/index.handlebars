@@ -1,22 +1,25 @@
-<h1>Burger Stop</h1>
 
-<h2>All the Burgers</h2>
+<div class="container">
+	<h1 class="title">Burger Stop</h1>
+
+<h2>Available Burgers</h2>
 
 <ul>
-	{{#each burger}}
-		{{#unless devoured}}
-				<li>
-			{{burger_name}}
+  {{#each burger}}
+    {{#unless devoured}}
+      {{> burgers/burgers-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
 
-			<button class="eat-burger" data-id="{{id}}" data-burger="{{devoured}}">
-				{{#if devoured}}EATEN{{else}}EAT{{/if}}
-			</button>
+<h2>Eaten Burgers!</h2>
 
-			{{!-- <button class="delete-cat" data-id="{{this.id}}">DELETE!</button> --}}
-		</li>
-
-		{{/unless}}
-	{{/each}}
+<ul>
+  {{#each burger}}
+    {{#if devoured}}
+      {{> burgers/burgers-block devoured=false}}
+    {{/if}}
+  {{/each}}
 </ul>
 
 <h2>Add a Burger</h2>
@@ -29,3 +32,5 @@
 
   <button type="submit">Add Burger</button>
 </form>
+
+</div>

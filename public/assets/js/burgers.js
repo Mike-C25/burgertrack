@@ -8,6 +8,11 @@ $(function() {
         var newBurger = {
             burger_name: $("#bur").val().trim()
         };
+
+        if(!newBurger.burger_name){
+        	alert("Please input a burger name in the field on the bottom");
+        	return;
+        }
         // console.log($("#bur").val());
         // Send the POST request.
         $.ajax("/api/burgers", {
@@ -20,4 +25,25 @@ $(function() {
             }
         );
     });
+
+
+    $(".change-devoured").on("click", function(event){
+    	event.preventDefault();
+    	var id = $(this).data("id");
+    	var newDevoured = $(this).data("devoured");
+
+    	var newDevouredState = {
+    		devoured: newDevoured
+    	};
+
+    	$.ajax("/api/burgers/" + id, {
+    		type: "PUT",
+    		data: newDevouredState
+    	}).then(function(){
+    		console.log("changed devour to ", newDevoured);
+    		location.reload();
+    	})
+
+
+    })
 })
