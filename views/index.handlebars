@@ -3,8 +3,18 @@
 <h2>All the Burgers</h2>
 
 <ul>
-	{{#each burgers}}
+	{{#each burger}}
 		{{#unless devoured}}
+				<li>
+			{{burger_name}}
+
+			<button class="eat-burger" data-id="{{id}}" data-burger="{{devoured}}">
+				{{#if devoured}}EATEN{{else}}EAT{{/if}}
+			</button>
+
+			{{!-- <button class="delete-cat" data-id="{{this.id}}">DELETE!</button> --}}
+		</li>
+
 		{{/unless}}
 	{{/each}}
 </ul>
@@ -13,14 +23,8 @@
 <form class="create-form">
 
   <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="devo">Devoured?</label><br>
-    <input type="radio" name="devour" value="1" checked> Devoured<br>
-    <input type="radio" name="devour" value="0"> Still here!
+    <label for="bur">Burger Name:</label>
+    <input type="text" id="bur" name="name">
   </div>
 
   <button type="submit">Add Burger</button>
